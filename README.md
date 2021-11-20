@@ -2,7 +2,7 @@
 This repository contains the necessary files and information to successfully boot macOS on this laptop. 
 
 
- # BIOS offsets (F21)
+ ### BIOS offsets (F21)
  
 - **CFG Lock** = setup_var 0x43 0x0 (Disabled)
  
