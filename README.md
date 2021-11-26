@@ -14,6 +14,7 @@ This repository contains the necessary files and information to successfully boo
  
 - **SATA Mode** = setup_var 0xB79 0x0 (AHCI) - this should be on zero by default
 
+- **GPIO Interrupt** = setup_var 0x2CA 0x0
 
 One Of: SATA Controller(s), VarStoreInfo (VarOffset/VarName): 0x5B,
 
