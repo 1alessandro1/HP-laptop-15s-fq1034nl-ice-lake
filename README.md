@@ -24,5 +24,5 @@ One Of: SATA Mode Selection, VarStoreInfo (VarOffset/VarName): 0x5C
  ### Sleep and `AAPL,ig-platform-id`
  
  It works with:
- - platform-id = 0200518A and default device-id 00008A52
- - platform-id = 01005C8A and device-id = 5C8A0000
+ - platform-id = 0200518A and default device-id = 528A0000 (cursor problem even with stolenmem set to 00003001
+ - platform-id = 01005C8A and device-id = 528A0000
