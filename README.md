@@ -18,8 +18,12 @@ This repository contains the necessary files and information to successfully boo
 
  ### Sleep and `AAPL,ig-platform-id`
  
+Unfortunately even after setting the DVMT Pre-Allocated value to 160MB (05) value in BIOS, the cursor problem persists, and from WhateverGreen's DEBUG logs I still can see that it is fixed to 60MB.
+
+![pre-allocated-fixed-value](Misc/images/pre-allocated-fixed-value.jpg)
+
  It works with:
- - platform-id = 0200518A and default device-id = 528A0000 (cursor problem even with stolenmem set to 00003001
+ - platform-id = 0200518A and default device-id = 528A0000 (but there's the cursor problem even with stolenmem set to 00003001 = 19MB or 0000B003 = 59MB)
  - platform-id = 01005C8A and device-id = 528A0000
 
 
