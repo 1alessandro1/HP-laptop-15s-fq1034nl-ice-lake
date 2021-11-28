@@ -6,6 +6,8 @@ This repository contains the necessary files and information to successfully boo
 - Kexts version: everything up-to-date with the latest version (check the links below)
 - macOS version: [Monterey](https://www.apple.com/macos/monterey) - Release channel
 
+![neofetch-flex](Misc/images/neofetch-flex.jpg)
+
 ## Specs
 
 | Component      | Brand                                     |
