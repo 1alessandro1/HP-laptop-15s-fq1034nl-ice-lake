@@ -92,20 +92,20 @@ Unfortunately even after setting the DVMT Pre-Allocated value to 160MB (05) valu
 
  The values I've tested to get the display to be functional after sleep are:
 
-| AAPL,ig-platform-id | device-id                                 | Issues                                                                                   |
-| ------------------- | ----------------------------------------- | ---------------------------------------------------------------------------------------- |
-|                     |                                           |                                                                                          |
-| 01005C8A            | 538A0000 (so it appears as Intel Iris G7) | IN USE - No cursor problem with stolenmem set to the highest possible value I can (59MB) |
-| 0200518A            | default from WeG (528A0000)               | cursor problem even with stolenmem set to 00003001 = 19MB or 0000B003 = 59MB             |
-| 0200538A            | 538A0000                                  | Black screen right after booting                                                         |
-| 0000528A            | default from WeG (528A0000)               | Black screen after sleep/wake cycle                                                      |
+| AAPL,ig-platform-id | `device-id`                                 | Issues                                                                                   |
+| ------------------- | --------------------------------------------| ---------------------------------------------------------------------------------------- |
+|                     |                                             |                                                                                          |
+| `01005C8A`          | `538A0000` (so it appears as Intel Iris G7) | IN USE - No cursor problem with stolenmem set to the highest possible value I can (59MB) |
+| `0200518A`          | `528A0000` (default from WeG)               | cursor problem even with stolenmem set to 00003001 = 19MB or 0000B003 = 59MB             |
+| `0200538A`          | `538A0000`                                  | Black screen right after booting                                                         |
+| `0000528A`          | `528A0000` (default from WeG)               | Black screen after sleep/wake cycle                                                      |
 
 
 ## Brightness keys 
 
 There is a simple `SSDT-PS2.aml` that works with the `_Q10` and `_Q11` rename which adds the correct `Notify` parameters to handle screen brightness while pressing `F2` or `F3`. Please note that `SSDT-PNLFCFL.aml` is reqired too.
 
-## MAT Support is 1
+## `MAT Support` is `1`
 
 Hence, the only `Booter > Quirks` required to boot are `AvoidRuntimeDefrag`, `RebuildAppleMemoryMap`, `SyncRuntimePermissions` and `SetupVirtualMap`.
 
@@ -129,12 +129,12 @@ With this laptop, HP went with a trackpad on the ACPI path `\_SB.PCI0.I2C1.TPD0`
 
 ## USB Mapping
 
-With the help of [dreamwhite](https://github.com/dreamwhite) we found a clever way to map usb ports present in the DSDT without having to drop tables or having to load SSDT-RHUB.
+With the help of [dreamwhite](https://github.com/dreamwhite) we found a clever way to map usb ports present in the `DSDT` without having to drop tables or having to load SSDT-RHUB.
 Basically by hot patching the `_UPC` method to `XUPC` we managed to define that method in an external `SSDT-USB.aml`.
 
 ### Wi-Fi speed with AirportItlwm and sleep
 
-For compatibility reasons, I chose to use the Intel 8260ac Wireless wifi card `8086:24f3`. In order to get the maximum performance, even though when using the recognized country code (IT) it shows 867Mbit (433 x 2 NSS) it actually barely reaches 30Mbit after a sleep wake cycle. 
+For compatibility reasons, I chose to use the Intel 8260ac Wireless wifi card `8086:24f3`. In order to get the maximum performance, even though when using the recognized country code (`IT`) it shows `867Mbit` (`433 x 2 NSS`) it actually barely reaches 30Mbit after a sleep wake cycle. 
 
 The workaround for this issue is to disconnect and reconnect to your Wi-Fi network, and the speeds will come back to default (70-75MB) even with the correctly recognized country code (`IT` in my case)
 
