@@ -116,7 +116,7 @@ With this laptop, HP went with a trackpad on the ACPI path `\_SB.PCI0.I2C1.TPD0`
 
 ## USB Mapping
 
-With the help of @dreamwhite we found a clever way to map usb ports present in the DSDT without having to drop tables or having to load SSDT-RHUB.
+With the help of [dreamwhite](https://github.com/dreamwhite) we found a clever way to map usb ports present in the DSDT without having to drop tables or having to load SSDT-RHUB.
 Basically by hot patching the `_UPC` method to `XUPC` we managed to define that method in an external `SSDT-USB.aml`.
 
 ### Wi-Fi speed with AirportItlwm and sleep
@@ -125,3 +125,12 @@ For compatibility reasons, I chose to use the Intel 8260ac Wireless wifi card `8
 
 The workaround for this issue is to disconnect and reconnect to your Wi-Fi network, and the speeds will come back to default (70-75MB) even with the correctly recognized country code (`IT` in my case)
 
+## Credits
+
+* [Apple](https://apple.com) for macOS
+* [Acidanthera](https://github.com/Acidanthera) for OpenCore and Lilu-based kexts 
+* [dreamwhite](https://github.com/dreamwhite) for helping me to fix the I2C trackpad and with SSDT/ACPI hotpatching
+* [Gengik84](https://www.macos86.it/profile/1-gengik84/) for the `GENG` method used in `SSDT-USB.aml`
+* [dortania](https://github.com/dortania) team for its detailed guides
+* [Corpnewt](https://github.com/CorpNewt) for SSDTTime and [fewtarius](https://github.com/fewtarius) for CPUFriend fork (now merged into Corp's repo)
+* [m0d16l14n1](https://github.com/m0d16l14n1/) for providing a [reference](https://github.com/m0d16l14n1/icelake-hackintosh) to all Ice Lake issues
