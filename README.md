@@ -18,7 +18,7 @@ This repository contains the necessary files and information to successfully boo
 | **Storage**    | `WD SN530 512GB`                          |
 | **Audio**      | `Realtek ALC236 - layout 3`               |
 | **WiFi Card**  | `Intel 8260ac - 8086:24f3`                |
-| **OS**         | `macOS Monterey (21A559)`                 |
+| **OS**         | `macOS Monterey 12.0 (21A559)`            |
 | **BIOS**       | `F21 Rev.A - maybe from .bin 086C8`       |
 
 
@@ -72,17 +72,17 @@ Additional drivers for cosmetic stuff:
 
  ### BIOS offsets (F21)
  
-- **CFG Lock** = setup_var 0x43 0x0 (Disabled)
+- **CFG Lock** = `setup_var 0x43 0x0` (Disabled)
  
-- **DVMT Pre-Allocated** = setup_var 0xA4 0x5 (160MB)
+- **DVMT Pre-Allocated** = `setup_var 0xA4 0x5` (160MB)
  
-- **DVMT Total Gfx Mem** = setup_var 0xA5 0x3 (MAX)
+- **DVMT Total Gfx Mem** = `setup_var 0xA5 0x3` (MAX)
  
-- **SATA Controller(s)** = 0x5B 0x1 (Enabled) - if you have the cable inside
+- **SATA Controller(s)** = `setup_var 0x5B 0x1` (Enabled) - if you have the cable inside
  
-- **SATA Mode** = setup_var 0x5C 0x0 (AHCI) - this should be on zero by default
+- **SATA Mode** = `setup_var 0x5C 0x0` (AHCI) - this should be on zero by default
 
-- **GPIO Interrupt** = setup_var 0x2CA 0x0
+- **GPIO Interrupt** = `setup_var 0x2CA 0x0`
 
  ### AAPL,ig-platform-id choice
 
