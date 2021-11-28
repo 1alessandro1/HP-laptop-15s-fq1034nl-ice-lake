@@ -10,16 +10,11 @@ This repository contains the necessary files and information to successfully boo
  
 - **DVMT Total Gfx Mem** = setup_var 0xA5 0x3 (MAX)
  
-- **SATA Controller(s)** = 0xB78 0x1 (Enabled) - if you have the cable inside 0x5B
+- **SATA Controller(s)** = 0x5B 0x1 (Enabled) - if you have the cable inside
  
-- **SATA Mode** = setup_var 0xB79 0x0 (AHCI) - this should be on zero by default
+- **SATA Mode** = setup_var 0x5C 0x0 (AHCI) - this should be on zero by default
 
 - **GPIO Interrupt** = setup_var 0x2CA 0x0
-
-One Of: SATA Controller(s), VarStoreInfo (VarOffset/VarName): 0x5B,
-
-One Of: SATA Mode Selection, VarStoreInfo (VarOffset/VarName): 0x5C
-
 
  ### Sleep and `AAPL,ig-platform-id`
  
