@@ -1,7 +1,6 @@
 # HP 15s-FQ1034NL
 This repository contains the necessary files and information to successfully boot macOS on this laptop. 
 
-This repository contains the necessary files and information to successfully boot macOS on this laptop. 
 - Bootloader version: **OpenCore 0.7.5**
 - Kexts version: everything up-to-date with the latest version (check the links below)
 - macOS version: [Monterey](https://www.apple.com/macos/monterey) - Release channel
