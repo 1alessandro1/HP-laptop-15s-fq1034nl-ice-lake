@@ -26,3 +26,9 @@ One Of: SATA Mode Selection, VarStoreInfo (VarOffset/VarName): 0x5C
  It works with:
  - platform-id = 0200518A and default device-id = 528A0000 (cursor problem even with stolenmem set to 00003001
  - platform-id = 01005C8A and device-id = 528A0000
+
+
+### Wi-Fi speed with AirportItlwm
+
+For compatibility reasons, I chose to use the Intel 8260ac Wireless wifi card 8086:24f3. In order to get the maximum performance, even though when using the recognized country code (IT) it shows 867Mbit (433 x 2 NSS) it actually barely reaches 30Mbit. This does not happen when manually adding the boot argument `itlwm_cc=ZZ` which instead shows 585MBit and it actually reaches those speeds (70-75MB/s)
+
