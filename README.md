@@ -108,7 +108,21 @@ There is a simple `SSDT-PS2.aml` that works with the `_Q10` and `_Q11` rename wh
 
 ## MAT Support is 1
 
-Hence, the only `Booter > Quirks` required to boot are `AvoidRuntimeDefrag`, `RebuildAppleMemoryMap`, `SyncRuntimePermissions` and `SetupVirtualMap`, maybe one day I'll whitelist the MMIO regions.
+Hence, the only `Booter > Quirks` required to boot are `AvoidRuntimeDefrag`, `RebuildAppleMemoryMap`, `SyncRuntimePermissions` and `SetupVirtualMap`.
+
+
+MMIO Devirtualization it is not required, as you can see from OpenCore log.
+
+```
+07:945 00:007 OCABC: MMIO devirt start
+07:948 00:002 OCABC: MMIO devirt 0xC0000000 (0x10000 pages, 0x800000000000100D) skip 0
+07:951 00:002 OCABC: MMIO devirt 0xFE000000 (0x11 pages, 0x8000000000000001) skip 0
+07:954 00:002 OCABC: MMIO devirt 0xFEC00000 (0x1 pages, 0x8000000000000001) skip 0
+07:957 00:003 OCABC: MMIO devirt 0xFED00000 (0x1 pages, 0x8000000000000001) skip 0
+07:959 00:002 OCABC: MMIO devirt 0xFEE00000 (0x1 pages, 0x8000000000000001) skip 0
+07:962 00:002 OCABC: MMIO devirt 0xFF000000 (0x1000 pages, 0x800000000000100D) skip 0
+07:965 00:002 OCABC: MMIO devirt end, saved 278608 KB
+```
 
 ## Gestures
 
