@@ -102,8 +102,8 @@ Unfortunately even after setting the DVMT Pre-Allocated value to 160MB (05) valu
 | AAPL,ig-platform-id |   device-id                                 | Issues                                                                                   |
 | ------------------- | --------------------------------------------| ---------------------------------------------------------------------------------------- |
 |                     |                                             |                                                                                          |
-| `0200518A`          | `528A0000` (default from WeG)               | IN USE cursor problem fixed after understanding that I had to edid `SaSetup` with `RU.efi`             |
-| `01005C8A`          | `528A0000` (default from WeG) | NOT in USE anymore - No cursor problem with stolenmem set to the highest possible value I can (59MB) |
+| `0200518A`          | `528A0000` (default from WeG)               | IN USE cursor problem fixed after understanding that I had to edid `SaSetup` with `RU.efi` |  
+| `01005C8A`          | `528A0000` (default from WeG) | NOT in USE anymore - No cursor problem with stolenmem set to the highest possible value I can (59MB)   |
 
 | `0200538A`          | `538A0000`                                  | Black screen right after booting                                                         |
 | `0000528A`          | `528A0000` (default from WeG)               | Black screen after sleep/wake cycle                                                      |
