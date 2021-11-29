@@ -91,7 +91,7 @@ Additional drivers for cosmetic stuff:
 
 Unfortunately even after setting the DVMT Pre-Allocated value to 160MB (05) value in BIOS, the cursor problem persists, and from WhateverGreen's DEBUG logs I still can see that it is fixed to 60MB.
 
-![pre-allocated-fixed-value](Misc/images/pre-allocated-fixed-value.jpg)
+![pre-allocated-corrected-value-128MB](Misc/images/pre-allocated-corrected-value-128MB.png)
 
  The values I've tested to get the display to be functional after sleep are:
 
