@@ -75,9 +75,9 @@ Additional drivers for cosmetic stuff:
  **Note**: The BIOSes present in the directory `Misc/Extracted\ sp132835/` are multiple bin files, and the one made for this laptop is precisely [this one](https://github.com/1alessandro1/HP-laptop-15s-fq1034nl-ice-lake/blob/main/Misc/Extracted%20sp132835/086C8.bin)
  
  
-- **CFG Lock** = `setup_var 0x43 0x0` (Disabled)
+- **CFG Lock** = `setup_var 0x43 0x0` (Disabled) (Section `CpuSetup`)
  
-- **DVMT Pre-Allocated** = `setup_var 0xA4 0x5` (160MB)
+- **DVMT Pre-Allocated** = `setup_var 0xA4 0x2` (64MB) (or `0x4` for 128MB) (Section `SaSetup`)
  
 - **DVMT Total Gfx Mem** = `setup_var 0xA5 0x3` (MAX)
  
