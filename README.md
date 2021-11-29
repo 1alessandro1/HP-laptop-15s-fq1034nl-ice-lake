@@ -58,7 +58,7 @@ Additional drivers for cosmetic stuff:
 ### Kexts
 
 * [AppleALC](https://github.com/acidanthera/AppleALC/releases/latest)
-* [CPUFriend](https://github.com/acidanthera/CPUFriend/releases/latest)
+* [CPUFriend](https://github.com/acidanthera/CPUFriend/releases/latest) - SSDT-PLUG is already configured with the frequency data
 * [HoRNDIS](https://github.com/jwise/HoRNDIS/releases/latest) - for those of you who like to have USB tethering support
 * [Lilu](https://github.com/acidanthera/Lilu/releases/latest)
 * [NVMeFix](https://github.com/acidanthera/NVMeFix/releases/latest)
