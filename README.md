@@ -87,6 +87,10 @@ Additional drivers for cosmetic stuff:
 
 - **GPIO Interrupt** = `setup_var 0x2CA 0x0`
 
+This way, if you applied these settings correctly: 
+- You won't need `framebuffer-fbmem` and `framebuffer-stolenmem` properties under `DeviceProperties` for the graphics patch
+- You won't need `AppleXCPMCfgLock` or similar kernel quirks
+
  ### AAPL,ig-platform-id choice
 
 Unfortunately even after setting the DVMT Pre-Allocated value to 160MB (05) value in BIOS, the cursor problem persists, and from WhateverGreen's DEBUG logs I still can see that it is fixed to 60MB.
