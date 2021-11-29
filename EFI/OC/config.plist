@@ -353,12 +353,12 @@
 			</dict>
 			<key>PciRoot(0x0)/Pci(0x2,0x0)</key>
 			<dict>
-				<key>#AAPL,Gfx324</key>
+				<key>AAPL,Gfx324</key>
 				<data>AQAAAA==</data>
-				<key>#AAPL,GfxYTile</key>
+				<key>AAPL,GfxYTile</key>
 				<data>AQAAAA==</data>
 				<key>AAPL,ig-platform-id</key>
-				<data>AQBcig==</data>
+				<data>AgBRig==</data>
 				<key>backlight-smoother-interval</key>
 				<data>BwAAAA==</data>
 				<key>backlight-smoother-steps</key>
@@ -373,12 +373,6 @@
 				<data>AQAAAA==</data>
 				<key>enable-dbuf-early-optimizer</key>
 				<data>AQAAAA==</data>
-				<key>enable-dvmt-calc-fix</key>
-				<data>AQAAAA==</data>
-				<key>framebuffer-patch-enable</key>
-				<data>AQAAAA==</data>
-				<key>framebuffer-stolenmem</key>
-				<data>AACwAw==</data>
 				<key>igfxfw</key>
 				<data>AgAAAA==</data>
 				<key>igfxpavp</key>
