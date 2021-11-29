@@ -95,7 +95,7 @@ Unfortunately even after setting the DVMT Pre-Allocated value to 160MB (05) valu
 
  The values I've tested to get the display to be functional after sleep are:
 
-| AAPL,ig-platform-id | `device-id`                                 | Issues                                                                                   |
+| AAPL,ig-platform-id |   device-id                                 | Issues                                                                                   |
 | ------------------- | --------------------------------------------| ---------------------------------------------------------------------------------------- |
 |                     |                                             |                                                                                          |
 | `01005C8A`          | `538A0000` (so it appears as Intel Iris G7) | IN USE - No cursor problem with stolenmem set to the highest possible value I can (59MB) |
