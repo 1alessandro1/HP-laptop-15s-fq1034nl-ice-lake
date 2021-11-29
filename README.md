@@ -67,7 +67,7 @@ Additional drivers for cosmetic stuff:
 * [VirtualSMC](https://github.com/acidanthera/VirtualSMC/releases/latest) 
 * [VoodooPS2Controller](https://github.com/acidanthera/VoodooPS2/releases/latest) - bundled with **VoodooPS2Keyboard.kext** (remove the others)
 * [VoodooI2C](https://github.com/VoodooI2C/VoodooI2C/releases/latest) bundled with **VoodooInput**, **VoodooGPIO.kext** and **VoodooI2CServices.kext**
-* [VoodooI2CHID](https://github.com/VoodooI2C/VoodooI2C/releases/latest)
+* [VoodooI2CHID](https://github.com/VoodooI2C/VoodooI2CHID)
 * [WhateverGreen](https://github.com/acidanthera/WhateverGreen/releases/latest)
 
  ### BIOS offsets (F21)
