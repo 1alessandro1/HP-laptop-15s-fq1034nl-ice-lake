@@ -1,4 +1,4 @@
-# HP 15s-FQ1034NL
+# HP laptop 15s-FQ1034NL Ice Lake
 This repository contains the necessary files and information to successfully boot macOS on this laptop. 
 
 - Bootloader version: **OpenCore 0.7.5**
