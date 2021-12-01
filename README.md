@@ -1,4 +1,4 @@
-# HP laptop 15s-FQ1034NL Ice Lake
+# HP laptop 15s-FQ1034NL Ice Lake - MacBookPro16,2
 This repository contains the necessary files and information to successfully boot macOS on this laptop. 
 
 - Bootloader version: **OpenCore 0.7.5**
@@ -24,7 +24,7 @@ This repository contains the necessary files and information to successfully boo
 
 ## Important notes
 
-- In the config.plist, section `PlatformInfo > Generic`, the following fields are currently edited with "CHANGEME" in order to force the user to generate his own serials. Refer to this guide to [know how](https://dortania.github.io/OpenCore-Install-Guide/config.plist/coffee-lake.html#platforminfo). 
+- In the config.plist, section `PlatformInfo > Generic`, the following fields are currently edited with "CHANGEME" in order to force the user to generate his own serials. Refer to this guide to [know how](https://dortania.github.io/OpenCore-Install-Guide/config-laptop.plist/icelake.html#platforminfo). 
   - `MLB`
   - `ROM`
   - `SystemSerialNumber` 
