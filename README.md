@@ -70,7 +70,7 @@ Additional drivers for cosmetic stuff:
 * [VoodooI2CHID](https://github.com/VoodooI2C/VoodooI2CHID)
 * [WhateverGreen](https://github.com/acidanthera/WhateverGreen/releases/latest)
 
- ### BIOS offsets (F21)
+ ### BIOS offsets (F21 Rev. A)
  
  **Note**: The BIOSes present in the directory `Misc/Extracted\ sp132835/` are multiple bin files, and the one made for this laptop is precisely [this one](https://github.com/1alessandro1/HP-laptop-15s-fq1034nl-ice-lake/blob/main/Misc/Extracted%20sp132835/086C8.bin)
  
@@ -79,13 +79,13 @@ Additional drivers for cosmetic stuff:
  
 - **DVMT Pre-Allocated** = `setup_var 0xA4 0x2` (64MB) (or `0x4` for 128MB) (Section `SaSetup`)
  
-- **DVMT Total Gfx Mem** = `setup_var 0xA5 0x3` (MAX)
+- **DVMT Total Gfx Mem** = `setup_var 0xA5 0x3` (MAX) (Section `SaSetup`)
  
-- **SATA Controller(s)** = `setup_var 0x5B 0x1` (Enabled) - if you have the cable inside
+- **SATA Controller(s)** = `setup_var 0x5B 0x1` (Enabled) - if you have the cable inside (Section `Setup`)
  
-- **SATA Mode** = `setup_var 0x5C 0x0` (AHCI) - this should be on zero by default
+- **SATA Mode** = `setup_var 0x5C 0x0` (AHCI) - this should be on zero by default (Section `Setup`)
 
-- **GPIO Interrupt** = `setup_var 0x2CA 0x0`
+- **GPIO Interrupt** = `setup_var 0x2CA 0x0` (Section `Setup`)
 
 This way, if you applied these settings correctly: 
 - You won't need `framebuffer-fbmem` and `framebuffer-stolenmem` properties under `DeviceProperties` for the graphics patch
@@ -142,9 +142,11 @@ MMIO Devirtualization it is not required, as you can see from OpenCore log.
 07:965 00:002 OCABC: MMIO devirt end, saved 278608 KB
 ```
 
-## Gestures
+## Trackpad and Gestures
 
 With this laptop, HP went with a trackpad on the ACPI path `\_SB.PCI0.I2C1.TPD0` with the name `ELAN0712`, but actually it's an HID device. `VoodooI2C.kext` and `VoodooI2CHID.kext` successfully handle all the native gestures. Everything is working, even the 4-fingers gestures.
+
+Please note that in order for the trackpad to work properly, you should set it in `GPIO Interrupt` in the BIOS and not `APIC Interrupt` (default)
 
 ## USB Mapping
 
