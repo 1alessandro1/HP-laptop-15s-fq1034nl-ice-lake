@@ -91,7 +91,7 @@ This way, if you applied these settings correctly:
 - You won't need `framebuffer-fbmem` and `framebuffer-stolenmem` properties under `DeviceProperties` for the graphics patch
 - You won't need `AppleXCPMCfgLock` or similar kernel quirks
 
- ### AAPL,ig-platform-id choice
+ ### AAPL,ig-platform-id choice and Sleep
 
 ~~Unfortunately even after setting the DVMT Pre-Allocated value to 160MB (05) value in BIOS, the cursor problem persists, and from WhateverGreen's DEBUG logs I still can see that it is fixed to 60MB.~~ FIXED
  
@@ -109,6 +109,16 @@ The problem above was in the fact that I was editing the wrong section, `Setup` 
 | `0200538A`          | `538A0000`                                  | Black screen right after booting                                                         |
 | `0000528A`          | `528A0000` (default from WeG)               | Black screen after sleep/wake cycle                                                      |
 
+Remember that you are recommended to apply these settings once you booted macOS:
+
+```
+sudo pmset autopoweroff 0
+sudo pmset powernap 0
+sudo pmset standby 0
+sudo pmset proximitywake 0
+sudo pmset tcpkeepalive 0
+```
+You can let `tcpkeepalive` to be on, but you might experience a litte bit more discharge than usual when putting your laptop to sleep overnight (7-8% instead of 3-5%) but you have the possibility to recieve notifications/updates every 2 hours since the laptop will wake to check them if `tcpkeepalive` is set to `1`
 
 ## Brightness keys 
 
