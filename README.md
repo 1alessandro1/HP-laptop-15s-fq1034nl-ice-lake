@@ -2,6 +2,7 @@
 This repository contains the necessary files and information to successfully boot macOS on this laptop. 
 
 - Bootloader version: **OpenCore 0.7.5**
+- SMBIOS: MacBookPro16,2: [check out the official MacBook on everymac](https://everymac.com/ultimate-mac-lookup/?search_keywords=MacBookPro16,2)
 - Kexts version: everything up-to-date with the latest version (check the links below)
 - macOS version: [Monterey](https://www.apple.com/macos/monterey) - Release channel
 
