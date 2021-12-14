@@ -347,9 +347,7 @@
 			<key>PciRoot(0x0)/Pci(0x1F,0x3)</key>
 			<dict>
 				<key>layout-id</key>
-				<data>AwAAAA==</data>
-				<key>No-hda-gfx</key>
-				<string>onboard-1</string>
+				<data>DQAAAA==</data>
 			</dict>
 			<key>PciRoot(0x0)/Pci(0x2,0x0)</key>
 			<dict>
@@ -554,13 +552,13 @@
 				<key>BundlePath</key>
 				<string>AirportItlwm.kext</string>
 				<key>Comment</key>
-				<string>Intel Wi-Fi Driver for macOS using Apple's native Wi-Fi menu</string>
+				<string>Intel Wi-Fi Driver for macOS using Apple's native Wi-Fi menu for Monterey</string>
 				<key>Enabled</key>
 				<true/>
 				<key>ExecutablePath</key>
 				<string>Contents/MacOS/AirportItlwm</string>
 				<key>MaxKernel</key>
-				<string></string>
+				<string>21.99.99</string>
 				<key>MinKernel</key>
 				<string>21.0.0</string>
 				<key>PlistPath</key>
@@ -626,7 +624,7 @@
 				<key>BundlePath</key>
 				<string>VoodooI2C.kext/Contents/PlugIns/VoodooGPIO.kext</string>
 				<key>Comment</key>
-				<string>VoodooI2C.kext plugin - GPIO Trackpad Controller (must be the first to load)</string>
+				<string>Intel SunrisePoint (and newer) GPIO controller driver</string>
 				<key>Enabled</key>
 				<true/>
 				<key>ExecutablePath</key>
@@ -634,7 +632,7 @@
 				<key>MaxKernel</key>
 				<string></string>
 				<key>MinKernel</key>
-				<string></string>
+				<string>16.0.0</string>
 				<key>PlistPath</key>
 				<string>Contents/Info.plist</string>
 			</dict>
@@ -644,7 +642,7 @@
 				<key>BundlePath</key>
 				<string>VoodooI2C.kext/Contents/PlugIns/VoodooInput.kext</string>
 				<key>Comment</key>
-				<string>VoodooI2C.kext plugin - Generic Multitouch Handler</string>
+				<string>VoodooI2C plugin - Generic Multitouch Handler</string>
 				<key>Enabled</key>
 				<true/>
 				<key>ExecutablePath</key>
@@ -652,7 +650,7 @@
 				<key>MaxKernel</key>
 				<string></string>
 				<key>MinKernel</key>
-				<string></string>
+				<string>15.0.0</string>
 				<key>PlistPath</key>
 				<string>Contents/Info.plist</string>
 			</dict>
@@ -662,7 +660,7 @@
 				<key>BundlePath</key>
 				<string>VoodooI2C.kext/Contents/PlugIns/VoodooI2CServices.kext</string>
 				<key>Comment</key>
-				<string>VoodooI2C.kext plugin - I2CServices</string>
+				<string>VoodooI2C plugin - I2CService</string>
 				<key>Enabled</key>
 				<true/>
 				<key>ExecutablePath</key>
@@ -680,7 +678,7 @@
 				<key>BundlePath</key>
 				<string>VoodooI2C.kext</string>
 				<key>Comment</key>
-				<string>Intel I2C controller bundled with slave device drivers for macOS </string>
+				<string>Intel I2C controller and slave device drivers</string>
 				<key>Enabled</key>
 				<true/>
 				<key>ExecutablePath</key>
@@ -688,7 +686,7 @@
 				<key>MaxKernel</key>
 				<string></string>
 				<key>MinKernel</key>
-				<string></string>
+				<string>16.0.0</string>
 				<key>PlistPath</key>
 				<string>Contents/Info.plist</string>
 			</dict>
@@ -698,7 +696,7 @@
 				<key>BundlePath</key>
 				<string>VoodooI2CHID.kext</string>
 				<key>Comment</key>
-				<string>VoodooI2C.kext plugin - For I2C HID Trackpad</string>
+				<string>VoodooI2C addon kext for HID touchpads</string>
 				<key>Enabled</key>
 				<true/>
 				<key>ExecutablePath</key>
@@ -706,7 +704,7 @@
 				<key>MaxKernel</key>
 				<string></string>
 				<key>MinKernel</key>
-				<string></string>
+				<string>16.0.0</string>
 				<key>PlistPath</key>
 				<string>Contents/Info.plist</string>
 			</dict>
@@ -825,7 +823,7 @@
 			<key>ApplePanic</key>
 			<false/>
 			<key>DisableWatchDog</key>
-			<false/>
+			<true/>
 			<key>DisplayDelay</key>
 			<integer>0</integer>
 			<key>DisplayLevel</key>
@@ -844,7 +842,7 @@
 			<key>AllowNvramReset</key>
 			<true/>
 			<key>AllowSetDefault</key>
-			<false/>
+			<true/>
 			<key>AllowToggleSip</key>
 			<false/>
 			<key>ApECID</key>
@@ -883,8 +881,6 @@
 			<dict>
 				<key>DefaultBackgroundColor</key>
 				<data>AAAAAA==</data>
-				<key>UIScale</key>
-				<data>AQ==</data>
 			</dict>
 			<key>7C436110-AB2A-4BBB-A880-FE41995C9F82</key>
 			<dict>
@@ -902,7 +898,6 @@
 		<dict>
 			<key>4D1EDE05-38C7-4A6A-9CC6-4BCCA8B38C14</key>
 			<array>
-				<string>UIScale</string>
 				<string>DefaultBackgroundColor</string>
 			</array>
 			<key>7C436110-AB2A-4BBB-A880-FE41995C9F82</key>
@@ -1096,6 +1091,8 @@
 			<false/>
 			<key>ProvideConsoleGop</key>
 			<true/>
+			<key>ReconnectGraphicsOnConnect</key>
+			<false/>
 			<key>ReconnectOnResChange</key>
 			<false/>
 			<key>ReplaceTabWithSpace</key>
@@ -1108,6 +1105,8 @@
 			<string>BuiltinGraphics</string>
 			<key>UgaPassThrough</key>
 			<false/>
+			<key>UIScale</key>
+			<integer>0</integer>
 		</dict>
 		<key>ProtocolOverrides</key>
 		<dict>
@@ -1156,6 +1155,8 @@
 			<false/>
 			<key>EnableVectorAcceleration</key>
 			<true/>
+			<key>EnableVmx</key>
+			<false/>
 			<key>ExitBootServicesDelay</key>
 			<integer>0</integer>
 			<key>ForceOcWriteFlash</key>
