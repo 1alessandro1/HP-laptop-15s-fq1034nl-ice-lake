@@ -17,7 +17,7 @@ This repository contains the necessary files and information to successfully boo
 | **CPU**        | `Intel Core i7-1065G7 @ 1.5 GHz`          |
 | **iGPU**       | `Intel Iris Plus Graphics G7 - Ice Lake`  |
 | **Storage**    | `WD SN530 512GB`                          |
-| **Audio**      | `Realtek ALC236 - layout 3`               |
+| **Audio**      | `Realtek ALC236 - layout 13`               |
 | **WiFi Card**  | `Intel 8260ac - 8086:24f3`                |
 | **OS**         | `macOS Monterey 12.2 (21D49)`             |
 | **BIOS**       | `F21 Rev.A - from .bin 086C8`             |
