@@ -824,7 +824,7 @@
 			<key>AllowToggleSip</key>
 			<false/>
 			<key>ApECID</key>
-			<integer>17357403772435097007</integer>
+			<integer>0</integer>
 			<key>AuthRestart</key>
 			<false/>
 			<key>BlacklistAppleUpdate</key>
@@ -842,11 +842,11 @@
 			<key>PasswordSalt</key>
 			<data></data>
 			<key>ScanPolicy</key>
-			<integer>524547</integer>
+			<integer>0</integer>
 			<key>SecureBootModel</key>
 			<string>j214k</string>
 			<key>Vault</key>
-			<string>Secure</string>
+			<string>Optional</string>
 		</dict>
 		<key>Tools</key>
 		<array/>
@@ -863,7 +863,7 @@
 			<key>7C436110-AB2A-4BBB-A880-FE41995C9F82</key>
 			<dict>
 				<key>boot-args</key>
-				<string>-noDC9</string>
+				<string>-v keepsyms=1 -noDC9</string>
 				<key>csr-active-config</key>
 				<data>AAAAAA==</data>
 				<key>prev-lang:kbd</key>
