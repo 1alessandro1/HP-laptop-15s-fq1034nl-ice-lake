@@ -1,7 +1,7 @@
 # HP laptop 15s-FQ1034NL Ice Lake - MacBookPro16,2
 This repository contains the necessary files and information to successfully boot macOS on this laptop. 
 
-- Bootloader version: **OpenCore 0.7.8**
+- Bootloader version: **OpenCore 0.7.9**
 - SMBIOS: [MacBookPro16,2](https://everymac.com/systems/apple/macbook_pro/specs/macbook-pro-core-i7-2.3-quad-core-13-2020-4-thunderbolt-3-ports-scissor-specs.html)
 - Kexts version: everything up-to-date with the latest version (check the links below)
 - macOS version: [Monterey](https://www.apple.com/macos/monterey) - Release channel
