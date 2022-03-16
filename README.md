@@ -71,7 +71,7 @@ Additional drivers for cosmetic stuff:
 * [VoodooI2CHID](https://github.com/VoodooI2C/VoodooI2CHID)
 * [WhateverGreen](https://github.com/acidanthera/WhateverGreen/releases/latest)
 
- ### BIOS offsets (F21 Rev. A)
+ ### BIOS offsets (F21 Rev. A and F23 Rev. A are unchanged)
  
  **Note**: The BIOSes present in the directory `Misc/Extracted\ sp132835/` are multiple bin files, and the one made for this laptop is precisely [this one](https://github.com/1alessandro1/HP-laptop-15s-fq1034nl-ice-lake/blob/main/Misc/Extracted%20sp132835/086C8.bin)
  
