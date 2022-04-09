@@ -14,13 +14,13 @@ This repository contains the necessary files and information to successfully boo
 
 | Component      | Brand                                     |
 |----------------|-------------------------------------------|
-| **CPU**        | `Intel Core i7-1065G7 @ 1.5 GHz`          |
-| **iGPU**       | `Intel Iris Plus Graphics G7 - Ice Lake`  |
-| **Storage**    | `WD SN530 512GB`                          |
-| **Audio**      | `Realtek ALC236 - layout 13`              |
-| **WiFi Card**  | `Intel 8260ac - 8086:24f3`                |
-| **OS**         | `macOS Monterey 12.3 (21E230)`            |
-| **BIOS**       | `F23 Rev.A - from .bin 086C8`             |
+| **CPU**        |  Intel Core i7-1065G7 @ 1.5 GHz           |
+| **iGPU**       |  Intel Iris Plus Graphics G7 - Ice Lake   |
+| **Storage**    |  WD SN530 512GB                           |
+| **Audio**      |  Realtek ALC236 - layout 13               |
+| **WiFi Card**  |  Intel 8260ac - 8086:24f3                 |
+| **OS**         |  macOS Monterey 12.3 (21E230)             |
+| **BIOS**       |  F23 Rev.A - from .bin 086C8              |
 
 
 ## Important notes
