@@ -20,7 +20,7 @@ This repository contains the necessary files and information to successfully boo
 | **Audio**      |  Realtek ALC236 - layout 13               |
 | **WiFi Card**  |  Intel 8260ac - 8086:24f3                 |
 | **OS**         |  macOS Monterey 12.3 (21E230)             |
-| **BIOS**       |  F23 Rev.A - from .bin 086C8              |
+| **BIOS**       |  F25 Rev.A - from .bin 086C8              |
 
 
 ## Important notes
