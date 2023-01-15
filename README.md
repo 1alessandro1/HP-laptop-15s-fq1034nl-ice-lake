@@ -1,14 +1,23 @@
 # HP laptop 15s-FQ1034NL Ice Lake - MacBookPro16,2
 This repository contains the necessary files and information to successfully boot macOS on this laptop. 
 
-- Bootloader version: **OpenCore 0.7.9**
+- Bootloader version: **OpenCore 0.8.8**
 - SMBIOS: [MacBookPro16,2](https://everymac.com/systems/apple/macbook_pro/specs/macbook-pro-core-i7-2.3-quad-core-13-2020-4-thunderbolt-3-ports-scissor-specs.html)
 - Kexts version: everything up-to-date with the latest version (check the links below)
 - macOS version: [Monterey](https://www.apple.com/macos/monterey) - Release channel
 
 ![monterey](Misc/images/monterey.png)
 
+<details>
+  <summary>neofetch flex</summary>
+
+
 ![neofetch-flex](Misc/images/neofetch-flex.png)
+
+Install `brew` for this, and `brew install neofetch`
+
+</details>
+
 
 ## Specs
 
@@ -16,12 +25,23 @@ This repository contains the necessary files and information to successfully boo
 |----------------|-------------------------------------------|
 | **CPU**        |  Intel Core i7-1065G7 @ 1.5 GHz           |
 | **iGPU**       |  Intel Iris Plus Graphics G7 - Ice Lake   |
+| **RAM**        |  32GB SODIMM 2400MHz                      |
 | **Storage**    |  WD SN530 512GB                           |
-| **Audio**      |  Realtek ALC236 - layout 13               |
-| **WiFi Card**  |  Intel 8260ac - 8086:24f3                 |
-| **OS**         |  macOS Monterey 12.3 (21E230)             |
+| **Audio**      |  Realtek ALC236 - layout-id 13            |
+| **WiFi Card**  |  Intel 9560NGW - 8086:34F0                |
+| **BT Card**    |  9460/9560 Jefferson Peak - 8087:0AAA     |
+| **OS**         |  macOS Monterey 12.6.2 (21G320)           |
 | **BIOS**       |  F25 Rev.A - from .bin 086C8              |
+| **Mobo name**  |  HP 86C9                                  |
 
+<details>
+  <summary>Pretty PCI overview</summary>
+
+
+![hackintool](Misc/images/hackintool.png)
+
+This tool is obtainable [here](https://github.com/headkaze/hackintool)
+</details>
 
 ## Important notes
 
@@ -31,36 +51,53 @@ This repository contains the necessary files and information to successfully boo
   - `SystemSerialNumber` 
   - `SystemUUID`
 
-- For those who have set up a multiboot environment with multiple drives as I did please note vendor-id and device-id `8086:282A` have to be spoofed on the `PciRoot(0x0)/Pci(0x17,0x0)` address hence `CtlnaAHCIPort.kext` is not required anymore
+- For those of you who are using a SATA SSD for macOS 11 Big Sur and newer it might be necessary to spoof HP infamous RAID controller `8086:282A` with another ID, a solution can be found [here](https://github.com/1alessandro1/HP-Pavilion-CE2072NL-macOS/blob/a453424ff048b0d15a9b5118d7cf68c1b94dd09c/EFI/OC/config.plist#L471-L477), this is a better alternative and does not require the manual injection of `CtlnaAHCIPort.kext` is not required anymore
 
 - OpenCanopy is fully configured with the correct theme from acidanthera, ([GoldenGate](https://dortania.github.io/OpenCanopy-Gallery/ocbinary.html#set-1-goldengate)) but if you want to disable this you should edit the `config.plist` and change `PickerMode` from `External` to `Builtin` or disable `ShowPicker` entirely.
 
 
 ## How to get this laptop to boot macOS flawlessly
 
-I highly suggest to read the [OpenCore guide](https://dortania.github.io/OpenCore-Install-Guide/)
+I highly suggest to read the [OpenCore guide](https://dortania.github.io/OpenCore-Install-Guide/).
 
-**Note**: For the ACPI configuration which might be the trickiest one, you can use the ones I have in `OC/ACPI`. Special thanks to [dreamwhite](https://github.com/dreamwhite) for his help with SSDTs and ACPI hotpatching with OpenCore.
 
+### ACPI
+
+- For the ACPI configuration which might be the trickiest one, you can use the ones I have in `EFI/OC/ACPI` if you have the same BIOS as mine (e.g. the `HP 14s-dq1013tu` has the same BIOS according to [ferdysopian](https://github.com/ferdysopian/14s-dq1013tu-hackintosh). 
+
+- Special thanks to [dreamwhite](https://github.com/dreamwhite) for his help on fixing the trackpad (`SSDT-TPD0` and `SSDT-GPIO`) and ACPI USB map (`SSDT-USB`) alongside all ACPI hotpatching
 
 
 ### Drivers
 
 Must have to boot any macOS version from USB:
 
-* OpenRuntime.efi (bundled in OpenCore package)
-* HfsPlus.efi (if you created the USB with [this method](https://dortania.github.io/OpenCore-Install-Guide/installer-guide/mac-install-recovery.html#legacy-macos-online-method) or with `createinstallmedia`) and can be found either in the `OC/Drivers` folder of this repository or in [acidanthera/OcBinaryData](https://github.com/acidanthera/OcBinaryData/blob/master/Drivers/HfsPlus.efi)
+* `HfsPlus.efi` - required for HFS support in UEFI - check [this method](https://dortania.github.io/OpenCore-Install-Guide/installer-guide/mac-install-recovery.html#legacy-macos-online-method) to create the HFS-formatted USB thumb drive 
+  <details>
+  <summary>Additional backgroud about the origins of this driver</summary>
+  
+  This driver can be found either in the `EFI/OC/Drivers` folder of this repository, in [acidanthera/OcBinaryData](https://github.com/acidanthera/OcBinaryData/master/Drivers/HfsPlus.efi) or [here](https://github.com/macos86/Estrazione-driver.efi-da-installer) if you want to extract it youself
+  
+  </details>
+  
+* `OpenRuntime.efi` - (bundled in OpenCore package)
+* `ResetNvramEntry.efi`  - (bundled in OpenCore package) to add NVRAM reset functionality.
+
 
 Additional drivers for cosmetic stuff:
 
-* AudioDxe.efi for Boot Chime support in UEFI environment (already enabled)
-* OpenCanopy.efi (bundled in OpenCore package) for Mac-like GUI support in picker
+* `AudioDxe.efi` - for Boot Chime support in UEFI environment (already enabled)
+* `OpenCanopy.efi` (bundled in OpenCore package) for Mac-like GUI support in picker
+
 
 ### Kexts
 
+* [AirportItlwm](https://github.com/OpenIntelwireless/itlwm/releases/latest)
 * [AppleALC](https://github.com/acidanthera/AppleALC/releases/latest)
 * [CPUFriend](https://github.com/acidanthera/CPUFriend/releases/latest) - SSDT-PLUG is already configured with the frequency data
-* [HoRNDIS](https://github.com/jwise/HoRNDIS/releases/latest) - for those of you who like to have USB tethering support
+* [HoRNDIS](https://github.com/jwise/HoRNDIS/releases/latest) - for those of you who like to have USB tethering support on Android devices
+* [BluetoolFixup](https://github.com/acidanthera/BrcmPatchRAM/releases/latest)
+* [IntelBluetoothFirmware](https://github.com/OpenIntelWireless/IntelBluetoothFirmware/releases/latest) 
 * [Lilu](https://github.com/acidanthera/Lilu/releases/latest)
 * [NVMeFix](https://github.com/acidanthera/NVMeFix/releases/latest)
 * [SMCBatteryManager](https://github.com/acidanthera/VirtualSMC/releases/latest) - shipped inside **VirtualSMC**
@@ -71,7 +108,7 @@ Additional drivers for cosmetic stuff:
 * [VoodooI2CHID](https://github.com/VoodooI2C/VoodooI2CHID)
 * [WhateverGreen](https://github.com/acidanthera/WhateverGreen/releases/latest)
 
- ### BIOS offsets (F21 Rev. A / and F23 Rev. A / F.25 Rev. A are unchanged)
+### BIOS offsets (F21 Rev. A / and F23 Rev. A / F.25 Rev. A are unchanged)
  
  **Note**: The BIOSes present in the directory `Misc/Extracted\ sp132835/` are multiple bin files, and the one made for this laptop is precisely [this one](https://github.com/1alessandro1/HP-laptop-15s-fq1034nl-ice-lake/blob/main/Misc/BIOS/BIOS_F.23_HP_086C9/Extracted%20sp135993/086C8.bin)
  
@@ -90,7 +127,26 @@ Additional drivers for cosmetic stuff:
 
 - **GPIO Interrupt** = `setup_var 0x2CA 0x0` (Section `Setup`)
 
-This way, if you applied these settings correctly: 
+You can use RU.efi or setup_var.efi to configure these settings. Check this utility who was born from [datasone](https://github.com/datasone)'s hard work to unlock them all by loading `OpenShell.efi` from F9 menu (present in `EFI/OC/Tools` alongside `setup_var.efi` and `RU.efi`)
+
+
+<details>
+  <summary>Commands to run with setup_var.efi</summary>
+
+  
+  
+  Note: these commands are only available in UEFI shell and the tool can be found [here](https://github.com/datasone/setup_var.efi)
+  
+  ```bash
+  setup_var.efi 0x43 0x0 -n CpuSetup # CFG Lock disabled
+  setup_var.efi 0xA4 0x2 -n SaSetup # DVMT Pre-Allocated to 64MB
+  setup_var.efi 0xA5 0x3 -n SaSetup # (MAX)
+  setup_var.efi 0x2CA 0x0 -n Setup # Trackpad GPIO mode
+  ```
+</details>
+
+This way, if you applied these settings correctly either with RU.efi or setup_var.efi:
+
 - You won't need `framebuffer-fbmem` and `framebuffer-stolenmem` properties under `DeviceProperties` for the graphics patch
 - You won't need `AppleXCPMCfgLock` or similar kernel quirks
 
@@ -131,12 +187,12 @@ You can keep `tcpkeepalive` on, but you might experience a litte bit more discha
 
 There is a simple `SSDT-PS2.aml` that works with the `_Q10` and `_Q11` rename which adds the correct `Notify` parameters to handle screen brightness while pressing `F2` or `F3`. Please note that `SSDT-PNLFCFL.aml` is reqired too.
 
-## `MAT Support` is `1`
+## Memory Attributes Table (MAT) support is present
 
 Hence, the only `Booter > Quirks` required to boot are `AvoidRuntimeDefrag`, `RebuildAppleMemoryMap`, `SyncRuntimePermissions` and `SetupVirtualMap`.
 
 
-MMIO Devirtualization it is not required.
+`MMIO` Devirtualization is not required.
 
 ## Trackpad and Gestures
 
@@ -153,16 +209,18 @@ Basically by hot patching the `_UPC` method to `XUPC` we managed to define that 
 
 ### Wi-Fi speed with AirportItlwm and sleep
 
-For compatibility reasons, I chose to use the Intel 8260ac Wireless wifi card `8086:24f3`. In order to get the maximum performance, even though when using the recognized country code (`IT`) it shows `867Mbit` (`433 x 2 NSS`) it actually barely reaches 30Mbit after a sleep wake cycle. 
+On WiFi support, **do not use the BCM94360NG** because makes macOS freeze randomly. This happened on multiple recent IceLake laptops. I've tested multiple cards and it seems that there is a very strict BIOS whitelist on what card is allowed to be used on this laptop. Intel 8260 (`8086:24f3`) was in use before, but with that one I couldn't get bluetooth support since these new IceLake laptops might expect CNViO cards like the Intel 9560NGW (`8086:34F0`)
 
-The workaround for this issue is to disconnect and reconnect to your Wi-Fi network, and the speeds will come back to default (70-75MB) even with the correctly recognized country code (`IT` in my case)
+A special thanks to [ferdysopian](https://github.com/ferdysopian) for his help on fixing RFKILL enabled on macOS, see [this thread](https://github.com/OpenIntelWireless/itlwm/issues/845) for more information.
+
 
 ## Credits
 
 * [Apple](https://apple.com) for macOS
 * [Acidanthera](https://github.com/Acidanthera) for OpenCore and Lilu-based kexts 
 * [dreamwhite](https://github.com/dreamwhite) for helping me to fix the I2C trackpad and with SSDT/ACPI hotpatching
-* [Gengik84](https://www.macos86.it/profile/1-gengik84/) for the `GENG` method used in `SSDT-USB.aml`
+* [ferdysopian](https://github.com/ferdysopian) for supporting me with WiFi RFKILL issues
+* [Gengik84](https://www.macos86.it/profile/1-gengik84/) for introducing us the `GENG` method used in SSDT-USB.aml
 * [dortania](https://github.com/dortania) team for its detailed guides
 * [Corpnewt](https://github.com/CorpNewt) for SSDTTime and [fewtarius](https://github.com/fewtarius) for CPUFriend fork (now merged into Corp's repo)
 * [m0d16l14n1](https://github.com/m0d16l14n1/) for providing a [reference](https://github.com/m0d16l14n1/icelake-hackintosh) to all Ice Lake issues
