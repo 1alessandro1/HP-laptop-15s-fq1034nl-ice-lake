@@ -1,18 +1,18 @@
 # HP laptop 15s-FQ1034NL Ice Lake - MacBookPro16,2
 This repository contains the necessary files and information to successfully boot macOS on this laptop. 
 
-- Bootloader version: **OpenCore 0.8.8**
+- Bootloader version: **OpenCore 1.0.3**
 - SMBIOS: [MacBookPro16,2](https://everymac.com/systems/apple/macbook_pro/specs/macbook-pro-core-i7-2.3-quad-core-13-2020-4-thunderbolt-3-ports-scissor-specs.html)
 - Kexts version: everything up-to-date with the latest version (check the links below)
-- macOS version: [Monterey](https://www.apple.com/macos/monterey) - Release channel
+- macOS version: [Sonoma](https://www.apple.com/macos/sonoma) - Release channel
 
-![monterey](Misc/images/monterey.png)
+![monterey](Misc/images/sonoma.png)
 
 <details>
-  <summary>neofetch flex</summary>
+  <summary>fastfetch flex - (RIP neofetch)</summary>
 
 
-![neofetch-flex](Misc/images/neofetch-flex.png)
+![neofetch-flex](Misc/images/fastfetch-flex.png)
 
 Install `brew` for this, and `brew install neofetch`
 
@@ -30,8 +30,8 @@ Install `brew` for this, and `brew install neofetch`
 | **Audio**      |  Realtek ALC236 - layout-id 13            |
 | **WiFi Card**  |  Intel 9560NGW - 8086:34F0                |
 | **BT Card**    |  9460/9560 Jefferson Peak - 8087:0AAA     |
-| **OS**         |  macOS Monterey 12.6.2 (21G320)           |
-| **BIOS**       |  F25 Rev.A - from .bin 086C8              |
+| **OS**         |  macOS Sonoma 14.7.2 (23H311)             |
+| **BIOS**       |  F36 Rev.A - from .bin 086C8              |
 | **Mobo name**  |  HP 86C9                                  |
 
 <details>
@@ -40,7 +40,7 @@ Install `brew` for this, and `brew install neofetch`
 
 ![hackintool](Misc/images/hackintool.png)
 
-This tool is obtainable [here](https://github.com/headkaze/hackintool)
+This tool is obtainable [here](https://github.com/benbaker76/Hackintool)
 </details>
 
 ## Important notes
@@ -108,7 +108,7 @@ Additional drivers for cosmetic stuff:
 * [VoodooI2CHID](https://github.com/VoodooI2C/VoodooI2CHID)
 * [WhateverGreen](https://github.com/acidanthera/WhateverGreen/releases/latest)
 
-### BIOS offsets (F21 Rev. A / and F23 Rev. A / F.25 Rev. A are unchanged)
+### BIOS offsets (F21 / and F23 / F25 / F36 are unchanged)
  
  **Note**: The BIOSes present in the directory `Misc/Extracted\ sp132835/` are multiple bin files, and the one made for this laptop is precisely [this one](https://github.com/1alessandro1/HP-laptop-15s-fq1034nl-ice-lake/blob/main/Misc/BIOS/BIOS_F.23_HP_086C9/Extracted%20sp135993/086C8.bin)
  
