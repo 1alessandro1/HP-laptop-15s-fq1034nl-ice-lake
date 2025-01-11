@@ -4,7 +4,7 @@ This repository contains the necessary files and information to successfully boo
 - Bootloader version: **OpenCore 1.0.3**
 - SMBIOS: [MacBookPro16,2](https://everymac.com/systems/apple/macbook_pro/specs/macbook-pro-core-i7-2.3-quad-core-13-2020-4-thunderbolt-3-ports-scissor-specs.html)
 - Kexts version: everything up-to-date with the latest version (check the links below)
-- macOS version: [Sonoma](https://www.apple.com/macos/sonoma) - Release channel
+- macOS version: Sonoma, Release channel
 
 ![monterey](Misc/images/sonoma.png)
 
