@@ -224,3 +224,5 @@ A special thanks to [ferdysopian](https://github.com/ferdysopian) for his help o
 * [dortania](https://github.com/dortania) team for its detailed guides
 * [Corpnewt](https://github.com/CorpNewt) for SSDTTime and [fewtarius](https://github.com/fewtarius) for CPUFriend fork (now merged into Corp's repo)
 * [m0d16l14n1](https://github.com/m0d16l14n1/) for providing a [reference](https://github.com/m0d16l14n1/icelake-hackintosh) to all Ice Lake issues
+
+[![Star History Chart](https://app.repohistory.com/api/svg?repo=1alessandro1/HP-laptop-15s-fq1034nl-ice-lake&type=Date&background=0D1117&color=f86262)](https://app.repohistory.com/star-history)
