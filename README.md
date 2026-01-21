@@ -1,7 +1,7 @@
 # HP laptop 15s-FQ1034NL Ice Lake - MacBookPro16,2
 This repository contains the necessary files and information to successfully boot macOS on this laptop. 
 
-- Bootloader version: **OpenCore 1.0.3**
+- Bootloader version: **OpenCore 1.0.6**
 - SMBIOS: [MacBookPro16,2](https://everymac.com/systems/apple/macbook_pro/specs/macbook-pro-core-i7-2.3-quad-core-13-2020-4-thunderbolt-3-ports-scissor-specs.html)
 - Kexts version: everything up-to-date with the latest version (check the links below)
 - macOS version: Sonoma, Release channel
@@ -31,7 +31,7 @@ Install `brew` for this, and `brew install neofetch`
 | **WiFi Card**  |  Intel 9560NGW - 8086:34F0                |
 | **BT Card**    |  9460/9560 Jefferson Peak - 8087:0AAA     |
 | **OS**         |  macOS Sonoma 14.7.2 (23H311)             |
-| **BIOS**       |  F36 Rev.A - from .bin 086C8              |
+| **BIOS**       |  F42 Rev.A - from .bin 086C8              |
 | **Mobo name**  |  HP 86C9                                  |
 
 <details>
@@ -108,7 +108,7 @@ Additional drivers for cosmetic stuff:
 * [VoodooI2CHID](https://github.com/VoodooI2C/VoodooI2CHID)
 * [WhateverGreen](https://github.com/acidanthera/WhateverGreen/releases/latest)
 
-### BIOS offsets (F21 / and F23 / F25 / F36 are unchanged)
+### BIOS offsets (F21 / and F23 / F25 / F36 / F42 are unchanged)
  
  **Note**: The BIOSes present in the directory `Misc/Extracted\ sp132835/` are multiple bin files, and the one made for this laptop is precisely [this one](https://github.com/1alessandro1/HP-laptop-15s-fq1034nl-ice-lake/blob/main/Misc/BIOS/BIOS_F.23_HP_086C9/Extracted%20sp135993/086C8.bin)
  
@@ -139,7 +139,7 @@ You can use RU.efi or setup_var.efi to configure these settings. Check this util
   
   ```bash
   setup_var.efi 0x43 0x0 -n CpuSetup # CFG Lock disabled
-  setup_var.efi 0xA4 0x2 -n SaSetup # DVMT Pre-Allocated to 64MB
+  setup_var.efi 0xA4 0x2 -n SaSetup # DVMT Pre-Allocated to 64MB
   setup_var.efi 0xA5 0x3 -n SaSetup # (MAX)
   setup_var.efi 0x2CA 0x0 -n Setup # Trackpad GPIO mode
   ```
