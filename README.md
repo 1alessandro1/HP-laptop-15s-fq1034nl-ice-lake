@@ -63,7 +63,7 @@ I highly suggest to read the [OpenCore guide](https://dortania.github.io/OpenCor
 
 ### ACPI
 
-- For the ACPI configuration which might be the trickiest one, you can use the ones I have in `EFI/OC/ACPI` if you have the same BIOS as mine (e.g. the `HP 14s-dq1013tu` has the same BIOS according to [ferdysopian](https://github.com/ferdysopian/14s-dq1013tu-hackintosh). 
+- For the ACPI configuration which might be the trickiest one, you can use the ones I have in `EFI/OC/ACPI` if you have the same BIOS as mine (e.g. the `HP 14s-dq1013tu` has the same BIOS according to [ferdysopian](https://github.com/ferdysopian/14s-dq1013tu-hackintosh))
 
 - Special thanks to [dreamwhite](https://github.com/dreamwhite) for his help on fixing the trackpad (`SSDT-TPD0` and `SSDT-GPIO`) and ACPI USB map (`SSDT-USB`) alongside all ACPI hotpatching
 
