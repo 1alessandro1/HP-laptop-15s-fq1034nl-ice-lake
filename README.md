@@ -29,8 +29,8 @@ Install `brew` for this, and `brew install neofetch`
 | **Storage**    |  WD SN530 512GB                           |
 | **Audio**      |  Realtek ALC236 - layout-id 13            |
 | **WiFi Card**  |  Intel 9560NGW - 8086:34F0                |
-| **BT Card**    |  9460/9560 Jefferson Peak - 8087:0AAA     |
-| **OS**         |  macOS Sonoma 14.7.2 (23H311)             |
+| **BT Card**    |  AX201 Jefferson Peak - 8087:0026         |
+| **OS**         |  macOS Sonoma 14.8.1 (23J230)             |
 | **BIOS**       |  F42 Rev.A - from .bin 086C8              |
 | **Mobo name**  |  HP 86C9                                  |
 
