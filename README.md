@@ -28,7 +28,7 @@ Install `brew` for this, and `brew install neofetch`
 | **RAM**        |  32GB SODIMM 2400MHz                      |
 | **Storage**    |  WD SN530 512GB                           |
 | **Audio**      |  Realtek ALC236 - layout-id 13            |
-| **WiFi Card**  |  Intel 9560NGW - 8086:34F0                |
+| **WiFi Card**  |  Intel AX210NGW - 8086:34F0                |
 | **BT Card**    |  AX201 Jefferson Peak - 8087:0026         |
 | **OS**         |  macOS Sonoma 14.8.1 (23J230)             |
 | **BIOS**       |  F42 Rev.A - from .bin 086C8              |
