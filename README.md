@@ -32,7 +32,7 @@ Install `brew` for this, and `brew install neofetch`
 | **BT Card**    |  AX201 Jefferson Peak - 8087:0026         |
 | **OS**         |  macOS Sonoma 14.8.1 (23J230)             |
 | **BIOS**       |  F42 Rev.A - from .bin 086C8              |
-| **Mobo name**  |  HP 86C9 (BIOS file is 086C8.bin          |
+| **Mobo name**  |  HP 86C9 (BIOS file is 086C8.bin)         |
 
 <details>
   <summary>Pretty PCI overview</summary>
