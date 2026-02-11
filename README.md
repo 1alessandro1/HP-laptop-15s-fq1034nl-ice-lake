@@ -26,7 +26,7 @@ Install `brew` for this, and `brew install neofetch`
 | **CPU**        |  Intel Core i7-1065G7 @ 1.5 GHz           |
 | **iGPU**       |  Intel Iris Plus Graphics G7 - Ice Lake   |
 | **RAM**        |  32GB SODIMM 2400MHz                      |
-| **Storage**    |  Intel SSD 660P (SSD 660P)                |
+| **Storage**    |  Intel NVMe SSD 660P (8086:f1a8)          |
 | **Audio**      |  Realtek ALC236 - layout-id 13            |
 | **WiFi Card**  |  Intel AX210NGW - 8086:34F0               |
 | **BT Card**    |  AX201 Jefferson Peak - 8087:0026         |
