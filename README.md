@@ -1,12 +1,12 @@
 # HP laptop 15s-FQ1034NL Ice Lake - MacBookPro16,2
 This repository contains the necessary files and information to successfully boot macOS on this laptop. 
 
-- Bootloader version: **OpenCore 1.0.6**
+- Bootloader version: **OpenCore 1.0.8**
 - SMBIOS: [MacBookPro16,2](https://everymac.com/systems/apple/macbook_pro/specs/macbook-pro-core-i7-2.3-quad-core-13-2020-4-thunderbolt-3-ports-scissor-specs.html)
 - Kexts version: everything up-to-date with the latest version (check the links below)
 - macOS version: Sonoma, Release channel
 
-![monterey](Misc/images/sonoma.png)
+![tahoe](Misc/images/Tahoe.png)
 
 <details>
   <summary>fastfetch flex - (RIP neofetch)</summary>
@@ -25,12 +25,12 @@ Install `brew` for this, and `brew install neofetch`
 |----------------|-------------------------------------------|
 | **CPU**        |  Intel Core i7-1065G7 @ 1.5 GHz           |
 | **iGPU**       |  Intel Iris Plus Graphics G7 - Ice Lake   |
-| **RAM**        |  32GB SODIMM 2400MHz                      |
+| **RAM**        |  32GB Samsung SODIMM 2667MHz              |
 | **Storage**    |  Intel NVMe SSD 660P (8086:f1a8)          |
 | **Audio**      |  Realtek ALC236 - layout-id 13            |
 | **WiFi Card**  |  Intel AX201NGW - 8086:34F0               |
 | **BT Card**    |  AX201 Jefferson Peak - (8087:0026)       |
-| **OS**         |  macOS Sonoma 14.8.1 (23J230)             |
+| **OS**         |  macOS Tahoe 26.7.3 (25G342)              |
 | **BIOS**       |  F42 Rev.A - from .bin 086C8              |
 | **Mobo name**  |  HP 86C9 (BIOS file is 086C8.bin)         |
 
