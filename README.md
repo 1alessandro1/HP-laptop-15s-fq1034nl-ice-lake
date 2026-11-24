@@ -92,16 +92,20 @@ Additional drivers for cosmetic stuff:
 
 ### Kexts
 
-* [AirportItlwm](https://github.com/OpenIntelwireless/itlwm/releases/latest)
+* [AirportItlwm by Laobamac](https://github.com/OpenIntelwireless/itlwm/releases/latest)
 * [AppleALC](https://github.com/acidanthera/AppleALC/releases/latest)
+* [BluetoolFixup](https://github.com/acidanthera/BrcmPatchRAM)
 * [CPUFriend](https://github.com/acidanthera/CPUFriend/releases/latest) - SSDT-PLUG is already configured with the frequency data
+* [ECEnabler](https://github.com/averycblack/ECEnabler/releases)
 * [HoRNDIS](https://github.com/jwise/HoRNDIS/releases/latest) - for those of you who like to have USB tethering support on Android devices
 * [BluetoolFixup](https://github.com/acidanthera/BrcmPatchRAM/releases/latest)
 * [IntelBluetoothFirmware](https://github.com/OpenIntelWireless/IntelBluetoothFirmware/releases/latest) 
 * [Lilu](https://github.com/acidanthera/Lilu/releases/latest)
 * [NVMeFix](https://github.com/acidanthera/NVMeFix/releases/latest)
+* [RestrictEvents](https://github.com/acidanthera/RestrictEvents)
 * [SMCBatteryManager](https://github.com/acidanthera/VirtualSMC/releases/latest) - shipped inside **VirtualSMC**
 * [SMCProcessor](https://github.com/acidanthera/VirtualSMC/releases/latest) - shipped inside **VirtualSMC**
+* [SimpleHDA](https://github.com/laobamac/SimpleHDA/releases)
 * [VirtualSMC](https://github.com/acidanthera/VirtualSMC/releases/latest) 
 * [VoodooPS2Controller](https://github.com/acidanthera/VoodooPS2/releases/latest) - bundled with **VoodooPS2Keyboard.kext** (remove the others)
 * [VoodooI2C](https://github.com/VoodooI2C/VoodooI2C/releases/latest) bundled with **VoodooInput**, **VoodooGPIO.kext** and **VoodooI2CServices.kext**
