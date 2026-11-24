@@ -14,7 +14,7 @@ This repository contains the necessary files and information to successfully boo
 
 ![neofetch-flex](Misc/images/fastfetch-flex.png)
 
-Install `brew` for this, and `brew install neofetch`
+Install `macports` for this, and `sudo ports install fastfetch`
 
 </details>
 
